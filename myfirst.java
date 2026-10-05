@@ -5,6 +5,21 @@
 //     }
 // }
 
+class Human{
+    private int age;
+
+    public void getAge() {
+        System.out.println("Age of the human is: "+age);
+    }
+
+    public void setAge(int age, Human obj) {
+        // this.age = age;
+        Human obj1=obj;//if we donot want to use this keyword then we can use another object of the same class and assign the value of age to that object and then we can access the age variable using that object.
+        obj1.age=age;
+    }
+    
+}
+
 // import java.util.Scanner;
 public class myfirst {
     public static void main(String[] args) {
@@ -39,15 +54,20 @@ public class myfirst {
         // }
         // sc.close();
         // if we have 2 String variables  but they have same value then also they are not equal because they are different objects in memory so we have to use equals() method to check the equality of two String variables.
-        String name="Rohit";
+        // String name="Rohit";
         // String name2="Rohit";
-        String name2="rohit";
-        if(name==name2){
-            System.out.println("Both are same");
-        }
-        else{
-            System.out.println("Both are not same");
-        }
+        // String name2="rohit";
+        // if(name==name2){
+        //     System.out.println("Both are same");
+        // }
+        // else{
+        //     System.out.println("Both are not same");
+        // }
+        // name="kumar";
+        // System.out.println(name);
+        Human obj=new Human();
+        obj.setAge(20, obj);
+        obj.getAge();
     }
     
 }
